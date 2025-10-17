@@ -9,3 +9,7 @@ jobs:
     runs-on: ubuntu-latest
 
     if: contains(github.event.pull_request.labels.*.name, 'stage')
+
+    steps:
+      - name: Display staging message
+        run: echo "Staging workflow triggered for PR labeled 'stage'"
